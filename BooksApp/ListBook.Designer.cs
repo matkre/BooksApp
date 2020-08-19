@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BooksApp));
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.messageViewField = new System.Windows.Forms.Label();
-            this.pdfButton = new System.Windows.Forms.Button();
+            this.downloadBook = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.LogAsAdmin = new System.Windows.Forms.Button();
@@ -53,52 +53,53 @@
             this.dataGridView.Location = new System.Drawing.Point(1, 1);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
-            this.dataGridView.Size = new System.Drawing.Size(485, 395);
+            this.dataGridView.Size = new System.Drawing.Size(640, 380);
             this.dataGridView.TabIndex = 0;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnClickCell);
             // 
             // messageViewField
             // 
             this.messageViewField.AutoSize = true;
-            this.messageViewField.Location = new System.Drawing.Point(24, 425);
+            this.messageViewField.Location = new System.Drawing.Point(12, 484);
             this.messageViewField.Name = "messageViewField";
             this.messageViewField.Size = new System.Drawing.Size(0, 13);
             this.messageViewField.TabIndex = 3;
             // 
-            // pdfButton
+            // downloadBook
             // 
-            this.pdfButton.Location = new System.Drawing.Point(579, 332);
-            this.pdfButton.Name = "pdfButton";
-            this.pdfButton.Size = new System.Drawing.Size(131, 23);
-            this.pdfButton.TabIndex = 5;
-            this.pdfButton.Text = "PDF Download";
-            this.pdfButton.UseVisualStyleBackColor = true;
+            this.downloadBook.Location = new System.Drawing.Point(733, 387);
+            this.downloadBook.Name = "downloadBook";
+            this.downloadBook.Size = new System.Drawing.Size(131, 23);
+            this.downloadBook.TabIndex = 5;
+            this.downloadBook.Text = "Pobierz książkę";
+            this.downloadBook.UseVisualStyleBackColor = true;
+            this.downloadBook.Click += new System.EventHandler(this.downloadBook_Click);
             // 
             // closeButton
             // 
             this.closeButton.BackColor = System.Drawing.SystemColors.Menu;
             this.closeButton.Image = global::BooksApp.Properties.Resources.offBut;
-            this.closeButton.Location = new System.Drawing.Point(963, 12);
+            this.closeButton.Location = new System.Drawing.Point(949, 1);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(53, 42);
+            this.closeButton.Size = new System.Drawing.Size(30, 27);
             this.closeButton.TabIndex = 6;
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(492, 1);
+            this.pictureBox.Location = new System.Drawing.Point(647, 1);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(296, 299);
+            this.pictureBox.Size = new System.Drawing.Size(296, 380);
             this.pictureBox.TabIndex = 4;
             this.pictureBox.TabStop = false;
             // 
             // LogAsAdmin
             // 
             this.LogAsAdmin.Image = ((System.Drawing.Image)(resources.GetObject("LogAsAdmin.Image")));
-            this.LogAsAdmin.Location = new System.Drawing.Point(732, 391);
+            this.LogAsAdmin.Location = new System.Drawing.Point(931, 457);
             this.LogAsAdmin.Name = "LogAsAdmin";
-            this.LogAsAdmin.Size = new System.Drawing.Size(56, 47);
+            this.LogAsAdmin.Size = new System.Drawing.Size(41, 40);
             this.LogAsAdmin.TabIndex = 2;
             this.LogAsAdmin.UseVisualStyleBackColor = true;
             this.LogAsAdmin.Click += new System.EventHandler(this.LogAsAdmin_Click);
@@ -108,9 +109,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1028, 571);
+            this.ClientSize = new System.Drawing.Size(984, 511);
             this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.pdfButton);
+            this.Controls.Add(this.downloadBook);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.messageViewField);
             this.Controls.Add(this.LogAsAdmin);
@@ -133,7 +134,7 @@
         private System.Windows.Forms.Button LogAsAdmin;
         private System.Windows.Forms.Label messageViewField;
         private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.Button pdfButton;
+        private System.Windows.Forms.Button downloadBook;
         private System.Windows.Forms.Button closeButton;
     }
 }

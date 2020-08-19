@@ -23,7 +23,7 @@ namespace BooksApp
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://webapibooks.azurewebsites.net");
+                client.BaseAddress = new Uri("https://webapibooks.azurewebsites.net/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 try
@@ -46,7 +46,7 @@ namespace BooksApp
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://webapibooks.azurewebsites.net");
+                client.BaseAddress = new Uri("https://webapibooks.azurewebsites.net/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 try
@@ -67,7 +67,7 @@ namespace BooksApp
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://webapibooks.azurewebsites.net");
+                client.BaseAddress = new Uri("https://webapibooks.azurewebsites.net/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 try
@@ -104,7 +104,7 @@ namespace BooksApp
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://webapibooks.azurewebsites.net");
+                client.BaseAddress = new Uri("https://webapibooks.azurewebsites.net/");
                 var response = client.PostAsJsonAsync("api/Books", books).Result;
                 if (response.IsSuccessStatusCode)
                 {
@@ -126,7 +126,7 @@ namespace BooksApp
         }
         private void Admin_Load(object sender, EventArgs e)
         {
-            FormBorderStyle = FormBorderStyle.None;
+            //FormBorderStyle = FormBorderStyle.None;
             //WindowState = FormWindowState.Maximized;
             GetBooks();
             pictureField.BackColor = Color.Black;

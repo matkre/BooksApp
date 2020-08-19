@@ -28,7 +28,7 @@ namespace BooksApp
             string login = loginField.Text;
             string pass = passField.Text;
 
-            if(login=="admin" && pass=="admin")
+            if(login=="book" && pass=="book")
             {
                 AdminWindow admin = new AdminWindow();
                 admin.Show();
